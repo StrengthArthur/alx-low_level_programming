@@ -1,13 +1,16 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
  * mul - mltiplies two integers
  * @a: integer to multiply
  * @b: integer to multiply
  * Return: Always 0
  */
-int mul(int a, int b);
+
+int mul(int a, int b)
 {
-	_putchar('a * b');
-	_putchar('\n');
-	return (0);
+	int result = a * b;
+
+	return (result);
 }

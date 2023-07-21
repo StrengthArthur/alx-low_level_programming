@@ -1,15 +1,18 @@
 #include "main.h"
 /**
- * main - check the code
+ * main - checks the code
+ * mul - muliplies the integers
  * Return: Always 0
  */
+
 int main(void)
 {
-	int a;
-	int b;
-
-	_putchar('a' * 'b');
-
+	
+	_putchar('a');
+	_putchar('*');
+	_putchar('b');
+	_putchar('\n');
+	
 	return (0);
 }
 
