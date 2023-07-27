@@ -1,12 +1,11 @@
 #include "main.h"
 /**
- * _strncat - This function concatenates two strings
+ * _strcat - This function concatenates two strings
  * @dest: This is the buffer for the concatenated string
  * @src: The source string to be appended
- * @n: Number of bytes
  * Return: char (dest)
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src)
 {
 	char *dest_ptr = dest;
 
@@ -14,12 +13,11 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		dest_ptr++;
 	}
-	while (*src != '\0' && n > 0)
+	while (*src != '\0')
 	{
 		*dest_ptr = *src;
 		dest_ptr++;
 		src++;
-		n--;
 	}
 	*dest_ptr = '\0';
 	return (dest);
