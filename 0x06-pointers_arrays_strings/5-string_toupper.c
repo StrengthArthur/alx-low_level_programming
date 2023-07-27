@@ -9,10 +9,10 @@ char *string_toupper(char *str)
 {
 	char *ptr = str;
 
-	while (*ptr)
+	while (*ptr != '/0')
 	if (*ptr >= 'a' && *ptr <= 'z')
 	{
-		*ptr = toupper(*ptr);
+		*ptr = *ptr - 'a' + 'A';
 	}
 	ptr++;
 	return (str);
