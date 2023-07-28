@@ -24,24 +24,23 @@ int is_separator(char chr)
  * @str: This is the input string
  * Return: Pointer to the modified string
  */
-
 char *cap_string(char *str)
 {
 	int i;
-	int capitalize_next = 1;
 
-	for(i = 0; str[i] != '\0'; i++)
+	/* Capitalize the first character */
+	if (str[0] >= 'a' && str[0] <= 'z')
 	{
-		if (is_separator(str[i]))
+		str[0] = str[0] - 32;
+	}
+	/* loop through the rest if the string */
+	for (i = 1; str[i] != '\0'; i++)
+	{
+		/* if character is separator and next lowercase, capitalize */
+		if (is_separator(str[i]) && str[i + 1] >= 'a' && str[i + 1] <= 'z')
 		{
-			capitalize_next = 1;
+			str[i + 1] = str[i + 1] - 32;
 		}
-		else if (capitalize_next)
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] = str[i] - 'a' + 'A';
-		}
-		capitalize_next = 0;
 	}
 	return (str);
 }
