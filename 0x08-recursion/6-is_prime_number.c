@@ -19,6 +19,7 @@ int prime(int i, int n)
 
 /**
  * is_prime_number - This function returns 1 if input is a prime number
+ * @n: integer
  * Return: prime
  */
 int is_prime_number(int n)
