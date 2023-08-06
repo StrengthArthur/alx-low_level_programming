@@ -1,9 +1,5 @@
 #!/bin/bash
 
-for source_files in *.c;
+gcc -c *.c
 
-do object_file="${source_file%.c}.o"
-	gcc -c "$source_file" -o "$object_file"
-done
-
-ar -rc liball.a *.o
+ar rc liball.a *.o
