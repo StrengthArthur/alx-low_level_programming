@@ -6,7 +6,7 @@
  * main - Entry point
  * @argc: Counts number of arguments
  * @argv: array to string of arguments
- * Return: 1 nd 0
+ * Return: 1 and 0
  */
 int main(int argc, char *argv[])
 {
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 }
 
 /**
- * pnumber - This function ckecks strings only
+ * pnumber - This function checks strings only
  * @num: checks string
  * Return: 1 Only digit, 0
  */
@@ -41,9 +41,9 @@ int pnumber(char *num)
 {
 	int i;
 
-	for (i = 0; num[1] != '\0'; i++)
+	for (i = 0; num[i] != '\0'; i++)
 	{
-		if (!isdigit(num[1]))
+		if (!isdigit(num[i]))
 			return (0);
 	}
 	return (1);
