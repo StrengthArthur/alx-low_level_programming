@@ -5,8 +5,8 @@
 /**
  * main - Entry point
  * @argc: Counts number of arguments
- * @argv : array to string of arguments
- * Return: 1 and 0
+ * @argv: array to string of arguments
+ * Return: 1 nd 0
  */
 int main(int argc, char *argv[])
 {
@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	unsigned int sum;
 
 	sum = 0;
+
 	for (i = 1; i < argc; i++)
 	{
 		if (pnumber(argv[i]))
