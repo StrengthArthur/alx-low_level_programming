@@ -10,7 +10,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2, total_len;
+	unsigned int len_s1, len_s2, concat_len;
 	char *result;
 
 	if (s1 == NULL)
@@ -22,24 +22,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	}
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
+	len_s1 = strlen(s1);
+	len_s2 = strlen(s2);
 
-	if (n >= len2)
+	if (n >= len_s2)
 	{
-		n = len2;
+		n = len_s2;
 	}
+	concat_len = len_s1 + ((n >= len_s2) ? len_s2 : n);
 
-	total_len = len1 + n + 1;
-	result = (char *)malloc(total_len);
+	result = (char *)malloc(concat_len + 1);
 
-	if (!result)
+	if (result == NULL)
 	{
 		return (NULL);
 	}
-	strncpy(result, s1, len1);
-	strncpy(result + len1, s2, n);
-	result[len1 + n] = '\0';
+	strcpy(result, s1);
+	strncat(result, s2, n);
 
 	return (result);
 }
