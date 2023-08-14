@@ -1,12 +1,10 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include <stdio.h>
 /**
- * A program that prints the name of the file compiled from
- * _putchar - Prints a character
- * Return: Always 0
+ * main - This program that prints the name of the file compiled from
+ * Return: 0
  */
-int _putchar(char c)
+int main(void)
 {
-	_putchar('c');
-	_putchar('\n');
+	printf("%s\n", __FILE__);
+	return (0);
 }
